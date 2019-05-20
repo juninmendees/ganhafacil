@@ -16,12 +16,12 @@ $numPossibilidades = sizeof($blocoEspecial);
 
 // Sorteando
 
-//$QuantidadeNumerosBlocoEspecial=3;
+$QuantidadeNumerosBlocoEspecial = 3;
 
-if ( $QuantidadeNumerosBlocoEspecial = 1 ) {
-    echo "Passou aqui";
+if ( $QuantidadeNumerosBlocoEspecial == 1 ) {
     $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidades - 1)];
-} elseif ( $QuantidadeNumerosBlocoEspecial = 2 ) {
+}
+if ( $QuantidadeNumerosBlocoEspecial == 2 ) {
     # Primeiro ganhador
     $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidades - 1)];
 
@@ -33,7 +33,8 @@ if ( $QuantidadeNumerosBlocoEspecial = 1 ) {
             --$i;
         }
     }
-} elseif ( $QuantidadeNumerosBlocoEspecial = 3 ) {
+}
+if ( $QuantidadeNumerosBlocoEspecial == 3 ) {
     # Primeiro ganhador
     $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidades - 1)];
 
@@ -59,9 +60,17 @@ if ( $QuantidadeNumerosBlocoEspecial = 1 ) {
 
 //Exibindo ganhadores
 echo "<b>Numeros Sorteados:</b> <br />";
-echo "<b>1°</b> - " . $sorteado[1] . "<br />";
-echo "<b>1°</b> - " . $sorteado[2] . "<br />";
-echo "<b>1°</b> - " . $sorteado[3] . "<br />";
+
+if ( isset($sorteado[1]) ) {
+    echo "<b>1°</b> - " . $sorteado[1] . "<br />";
+}
+
+if ( isset($sorteado[2]) ) {
+    echo "<b>1°</b> - " . $sorteado[2] . "<br />";
+}
+if ( isset($sorteado[3]) ) {
+    echo "<b>1°</b> - " . $sorteado[3] . "<br />";
+}
 
 
 ?>
