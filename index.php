@@ -15,7 +15,6 @@ $numPossibilidades = sizeof($blocoEspecial);
 
 
 // Sorteando
-
 $QuantidadeNumerosBlocoEspecial = 3;
 
 if ( $QuantidadeNumerosBlocoEspecial == 1 ) {
