@@ -23,12 +23,7 @@
 
 
 <?php
-/*
- Criar função Sortear, que deve popular o array $resultado e imprimir na tela.
-Essa função deve gerar a quantidade de numero informada na variavel $padraoApostaDefault
-E completar com a quantidade de numeros do array $blocogeral até um total de 15 numeros
 
-*/
 
 
 // Matriz com todos os numeros especiais
@@ -42,12 +37,13 @@ $numPossibilidadesBlocoEspecial = sizeof($blocoEspecial);
 
 
 $QuantidadeNumerosBilhete = 15;
-$QuantidadeNumerosBlocoEspecial = 3;
+$QuantidadeNumerosBlocoEspecial = 5;
 $QuantidadeNumerosBlocoGeral = ($QuantidadeNumerosBilhete - $QuantidadeNumerosBlocoEspecial);
 
 if ( $QuantidadeNumerosBlocoEspecial == 1 ) {
     $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
 }
+
 if ( $QuantidadeNumerosBlocoEspecial == 2 ) {
     # Primeiro ganhador
     $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
@@ -125,7 +121,119 @@ if ( $QuantidadeNumerosBlocoEspecial == 4 ) {
 
 
 
-    
+ if ( $QuantidadeNumerosBlocoEspecial == 5 ) {
+    $contador = 1;
+
+
+# Um Numero
+    $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+
+    # Dois Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[2] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[2] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+
+    # Três Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[3] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[3] == $sorteado[1] || 
+             $sorteado[3] == $sorteado[2] ) {
+            --$i;
+        }
+    }
+
+     # Quatro Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[4] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[4] == $sorteado[3] || 
+             $sorteado[4] == $sorteado[2] || 
+             $sorteado[4] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+
+         # Quinto Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[5] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[5] == $sorteado[4] || 
+             $sorteado[5] == $sorteado[3] ||
+             $sorteado[5] == $sorteado[2] ||
+             $sorteado[5] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+}
+   
+
+ if ( $QuantidadeNumerosBlocoEspecial == 6 ) {
+    $contador = 1;
+
+
+# Um Numero
+    $sorteado[1] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+
+    # Dois Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[2] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[2] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+
+    # Três Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[3] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[3] == $sorteado[1] || 
+             $sorteado[3] == $sorteado[2] ) {
+            --$i;
+        }
+    }
+
+     # Quatro Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[4] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[4] == $sorteado[3] || 
+             $sorteado[4] == $sorteado[2] || 
+             $sorteado[4] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+
+         # Quinto Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[5] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ( $sorteado[5] == $sorteado[4] || 
+             $sorteado[5] == $sorteado[3] ||
+             $sorteado[5] == $sorteado[2] ||
+             $sorteado[5] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+
+             # Sexto Numeros
+    for ($i = 1; $i < 2; $i++) {
+        $sorteado[6] = $blocoEspecial[rand(0, $numPossibilidadesBlocoEspecial - 1)];
+        // Caso o ganhador já tenha saido, sorteia novamente.
+        if ($sorteado[6] == $sorteado[5] || 
+            $sorteado[6] == $sorteado[4] || 
+            $sorteado[6] == $sorteado[3] ||
+            $sorteado[6] == $sorteado[2] ||
+            $sorteado[6] == $sorteado[1] ) {
+            --$i;
+        }
+    }
+}
 
 
 //Exibindo ganhadores
@@ -143,6 +251,9 @@ if ( isset($sorteado[3]) ) {
 }
 if ( isset($sorteado[4]) ) {
   echo $sorteado[4]. " - "; 
+}
+if ( isset($sorteado[5]) ) {
+  echo $sorteado[5]. " - "; 
 }
 
 ?>
