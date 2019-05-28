@@ -1,3 +1,32 @@
-.impressao{
-	background: #abeafe;
+.containerLogin{
+    margin:  50px auto;
+    border: solid #000000 1px;
+    width: 500px;
+    height: 500px;
+}
+
+.boxPequeno{
+    margin: 50px auto;
+    width: 300px;
+    height: 300px;
+    border: solid #abeafe 0px;
+}
+
+.fullWidth{
+    width: 100%;
+}
+
+.marcador1{
+    border: solid #000000 1px;
+    background: #2aabd2;
+}
+
+.marcador2{
+    border: solid #002340 1px;
+    background: #3c763d;
+}
+
+.marcador3{
+    border: solid #c9302c 1px;
+    background: #cccccc;
 }
