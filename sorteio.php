@@ -548,13 +548,18 @@ if ( isset($sorteado[9]) ) {
 
 //SORTEIO DOS NUMEROS DO BLOCO GERAL
 
-for ($i=0; $i < ($QuantidadeNumerosBilhete - $QuantidadeNumerosBlocoEspecial) ; $i++) { 
-    $numeroGeralSorteado[$i] = $blocoGeral[rand(0, $numPossibilidadesBlocoGeral - 1)];
-       foreach ($numeroGeralSorteado as  $value) {
-           if ($numeroGeralSorteado ==) {
-               # code...
-           }
-       }
+//for ($i=0; $i < ($QuantidadeNumerosBilhete - $QuantidadeNumerosBlocoEspecial) ; $i++) { 
+   // $numeroGeralSorteado[$i] = $blocoGeral[rand(0, $numPossibilidadesBlocoGeral - 1)];
+
+		sorteiaNumerosGerais(); //DEVERÁ DEVOLVER UM ARRAY COM A QUANTIDADE CORRETA DE NUMEROS DO BLOCO GERAL
+
+		imprimeNumerosGerais(); //DEVERÁ EXISTIR UM LAÇO DE REPETIÇÃO DENTRO DESSE METODO, IMPRIMINDO TODOS OS NUMEROS DESSE BLOCO, CONCATENANDO COM OS DO BLOCO ANTERIOR E EXIBINDO NA TELA.
+
+    	if (array_key_exists($numeroGeralSorteado[$i], $numeroGeralSorteado)) {
+    		echo "Numero já existe no array geral";
+    	}
+
+   	$resultadoNumerosGeral[$i] = $numeroGeralSorteado[$i];
 
     echo $numeroGeralSorteado[$i]." - ";
 }
